@@ -10,33 +10,232 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AiAssistantRouteImport } from './routes/ai-assistant'
+import { Route as AssessmentRouteImport } from './routes/assessment'
+import { Route as BiomarkersRouteImport } from './routes/biomarkers'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as LabTestsRouteImport } from './routes/lab-tests'
+import { Route as MarketplaceRouteImport } from './routes/marketplace'
+import { Route as MindConnectionRouteImport } from './routes/mind-connection'
+import { Route as MovementRouteImport } from './routes/movement'
+import { Route as NutritionRouteImport } from './routes/nutrition'
+import { Route as ProtocolRouteImport } from './routes/protocol'
+import { Route as QuestionnaireRouteImport } from './routes/questionnaire'
+import { Route as RecoveryRouteImport } from './routes/recovery'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as VitalityRouteImport } from './routes/vitality'
+import { Route as WearablesRouteImport } from './routes/wearables'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AiAssistantRoute = AiAssistantRouteImport.update({
+  id: '/ai-assistant',
+  path: '/ai-assistant',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AssessmentRoute = AssessmentRouteImport.update({
+  id: '/assessment',
+  path: '/assessment',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BiomarkersRoute = BiomarkersRouteImport.update({
+  id: '/biomarkers',
+  path: '/biomarkers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LabTestsRoute = LabTestsRouteImport.update({
+  id: '/lab-tests',
+  path: '/lab-tests',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketplaceRoute = MarketplaceRouteImport.update({
+  id: '/marketplace',
+  path: '/marketplace',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MindConnectionRoute = MindConnectionRouteImport.update({
+  id: '/mind-connection',
+  path: '/mind-connection',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MovementRoute = MovementRouteImport.update({
+  id: '/movement',
+  path: '/movement',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NutritionRoute = NutritionRouteImport.update({
+  id: '/nutrition',
+  path: '/nutrition',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProtocolRoute = ProtocolRouteImport.update({
+  id: '/protocol',
+  path: '/protocol',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuestionnaireRoute = QuestionnaireRouteImport.update({
+  id: '/questionnaire',
+  path: '/questionnaire',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecoveryRoute = RecoveryRouteImport.update({
+  id: '/recovery',
+  path: '/recovery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VitalityRoute = VitalityRouteImport.update({
+  id: '/vitality',
+  path: '/vitality',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WearablesRoute = WearablesRouteImport.update({
+  id: '/wearables',
+  path: '/wearables',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ai-assistant': typeof AiAssistantRoute
+  '/assessment': typeof AssessmentRoute
+  '/biomarkers': typeof BiomarkersRoute
+  '/dashboard': typeof DashboardRoute
+  '/lab-tests': typeof LabTestsRoute
+  '/marketplace': typeof MarketplaceRoute
+  '/mind-connection': typeof MindConnectionRoute
+  '/movement': typeof MovementRoute
+  '/nutrition': typeof NutritionRoute
+  '/protocol': typeof ProtocolRoute
+  '/questionnaire': typeof QuestionnaireRoute
+  '/recovery': typeof RecoveryRoute
+  '/settings': typeof SettingsRoute
+  '/vitality': typeof VitalityRoute
+  '/wearables': typeof WearablesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ai-assistant': typeof AiAssistantRoute
+  '/assessment': typeof AssessmentRoute
+  '/biomarkers': typeof BiomarkersRoute
+  '/dashboard': typeof DashboardRoute
+  '/lab-tests': typeof LabTestsRoute
+  '/marketplace': typeof MarketplaceRoute
+  '/mind-connection': typeof MindConnectionRoute
+  '/movement': typeof MovementRoute
+  '/nutrition': typeof NutritionRoute
+  '/protocol': typeof ProtocolRoute
+  '/questionnaire': typeof QuestionnaireRoute
+  '/recovery': typeof RecoveryRoute
+  '/settings': typeof SettingsRoute
+  '/vitality': typeof VitalityRoute
+  '/wearables': typeof WearablesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ai-assistant': typeof AiAssistantRoute
+  '/assessment': typeof AssessmentRoute
+  '/biomarkers': typeof BiomarkersRoute
+  '/dashboard': typeof DashboardRoute
+  '/lab-tests': typeof LabTestsRoute
+  '/marketplace': typeof MarketplaceRoute
+  '/mind-connection': typeof MindConnectionRoute
+  '/movement': typeof MovementRoute
+  '/nutrition': typeof NutritionRoute
+  '/protocol': typeof ProtocolRoute
+  '/questionnaire': typeof QuestionnaireRoute
+  '/recovery': typeof RecoveryRoute
+  '/settings': typeof SettingsRoute
+  '/vitality': typeof VitalityRoute
+  '/wearables': typeof WearablesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/ai-assistant'
+    | '/assessment'
+    | '/biomarkers'
+    | '/dashboard'
+    | '/lab-tests'
+    | '/marketplace'
+    | '/mind-connection'
+    | '/movement'
+    | '/nutrition'
+    | '/protocol'
+    | '/questionnaire'
+    | '/recovery'
+    | '/settings'
+    | '/vitality'
+    | '/wearables'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/ai-assistant'
+    | '/assessment'
+    | '/biomarkers'
+    | '/dashboard'
+    | '/lab-tests'
+    | '/marketplace'
+    | '/mind-connection'
+    | '/movement'
+    | '/nutrition'
+    | '/protocol'
+    | '/questionnaire'
+    | '/recovery'
+    | '/settings'
+    | '/vitality'
+    | '/wearables'
+  id:
+    | '__root__'
+    | '/'
+    | '/ai-assistant'
+    | '/assessment'
+    | '/biomarkers'
+    | '/dashboard'
+    | '/lab-tests'
+    | '/marketplace'
+    | '/mind-connection'
+    | '/movement'
+    | '/nutrition'
+    | '/protocol'
+    | '/questionnaire'
+    | '/recovery'
+    | '/settings'
+    | '/vitality'
+    | '/wearables'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AiAssistantRoute: typeof AiAssistantRoute
+  AssessmentRoute: typeof AssessmentRoute
+  BiomarkersRoute: typeof BiomarkersRoute
+  DashboardRoute: typeof DashboardRoute
+  LabTestsRoute: typeof LabTestsRoute
+  MarketplaceRoute: typeof MarketplaceRoute
+  MindConnectionRoute: typeof MindConnectionRoute
+  MovementRoute: typeof MovementRoute
+  NutritionRoute: typeof NutritionRoute
+  ProtocolRoute: typeof ProtocolRoute
+  QuestionnaireRoute: typeof QuestionnaireRoute
+  RecoveryRoute: typeof RecoveryRoute
+  SettingsRoute: typeof SettingsRoute
+  VitalityRoute: typeof VitalityRoute
+  WearablesRoute: typeof WearablesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +247,131 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ai-assistant': {
+      id: '/ai-assistant'
+      path: '/ai-assistant'
+      fullPath: '/ai-assistant'
+      preLoaderRoute: typeof AiAssistantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/assessment': {
+      id: '/assessment'
+      path: '/assessment'
+      fullPath: '/assessment'
+      preLoaderRoute: typeof AssessmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/biomarkers': {
+      id: '/biomarkers'
+      path: '/biomarkers'
+      fullPath: '/biomarkers'
+      preLoaderRoute: typeof BiomarkersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lab-tests': {
+      id: '/lab-tests'
+      path: '/lab-tests'
+      fullPath: '/lab-tests'
+      preLoaderRoute: typeof LabTestsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/marketplace': {
+      id: '/marketplace'
+      path: '/marketplace'
+      fullPath: '/marketplace'
+      preLoaderRoute: typeof MarketplaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mind-connection': {
+      id: '/mind-connection'
+      path: '/mind-connection'
+      fullPath: '/mind-connection'
+      preLoaderRoute: typeof MindConnectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/movement': {
+      id: '/movement'
+      path: '/movement'
+      fullPath: '/movement'
+      preLoaderRoute: typeof MovementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nutrition': {
+      id: '/nutrition'
+      path: '/nutrition'
+      fullPath: '/nutrition'
+      preLoaderRoute: typeof NutritionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/protocol': {
+      id: '/protocol'
+      path: '/protocol'
+      fullPath: '/protocol'
+      preLoaderRoute: typeof ProtocolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/questionnaire': {
+      id: '/questionnaire'
+      path: '/questionnaire'
+      fullPath: '/questionnaire'
+      preLoaderRoute: typeof QuestionnaireRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recovery': {
+      id: '/recovery'
+      path: '/recovery'
+      fullPath: '/recovery'
+      preLoaderRoute: typeof RecoveryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vitality': {
+      id: '/vitality'
+      path: '/vitality'
+      fullPath: '/vitality'
+      preLoaderRoute: typeof VitalityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wearables': {
+      id: '/wearables'
+      path: '/wearables'
+      fullPath: '/wearables'
+      preLoaderRoute: typeof WearablesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AiAssistantRoute: AiAssistantRoute,
+  AssessmentRoute: AssessmentRoute,
+  BiomarkersRoute: BiomarkersRoute,
+  DashboardRoute: DashboardRoute,
+  LabTestsRoute: LabTestsRoute,
+  MarketplaceRoute: MarketplaceRoute,
+  MindConnectionRoute: MindConnectionRoute,
+  MovementRoute: MovementRoute,
+  NutritionRoute: NutritionRoute,
+  ProtocolRoute: ProtocolRoute,
+  QuestionnaireRoute: QuestionnaireRoute,
+  RecoveryRoute: RecoveryRoute,
+  SettingsRoute: SettingsRoute,
+  VitalityRoute: VitalityRoute,
+  WearablesRoute: WearablesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
